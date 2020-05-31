@@ -1,0 +1,37 @@
+      
+        <div class="insider">
+            <div class="row mx-auto p-5">
+                <div class="col-lg">
+                    <div *ngFor = "let j of stateData" class="dataContainer">
+                        <h1>{{j['stateName']}}</h1>
+                        <table class="table table-dark">
+                            <thead>
+                                <th *ngFor = "let head of heads" scope="col">
+                                    {{head}}
+                                </th>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor = "let k of j[j['stateName']]">
+                                    <td>
+                                        {{k['distName']}}
+                                    </td>
+                                    <td>
+                                        {{k['confirmed']}}
+                                    </td>
+                                    <td>
+                                        {{k['deceased']}}
+                                    </td> 
+                                    <td>
+                                        {{k['recovered']}}
+                                    </td>
+                                </tr>
+                            </tbody>              
+                        </table>
+                        </div>
+            
+                </div>
+            </div>
+        </div>
+      
+        
+      

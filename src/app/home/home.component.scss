@@ -1,0 +1,106 @@
+.heading{
+    top: 25px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    h1{
+        color: rgb(78, 76, 76);
+        font-size: 70px;
+        letter-spacing: 7px;
+    }
+    h3{
+        color: grey;
+        letter-spacing: 7px;
+        font-size: 20px;
+    }
+}
+
+.insider{
+    background: rgb(7,84,99);
+    background: -moz-linear-gradient(135deg, rgba(7,84,99,1) 0%, rgba(2,2,37,1) 46%, rgba(2,0,36,1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(7,84,99,1) 0%, rgba(2,2,37,1) 46%, rgba(2,0,36,1) 100%);
+    background: linear-gradient(135deg, rgba(7,84,99,1) 0%, rgba(2,2,37,1) 46%, rgba(2,0,36,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#075463",endColorstr="#020024",GradientType=1);
+    
+}
+.row{
+    padding: 10%;
+  .cards{
+        .card-body.conf{
+            background: black;
+            border-radius: 10px;
+            color: dodgerblue;
+        h1{
+            font-size: 50px;
+        }
+        }
+        .card-body.rec{
+            border-radius: 10px;
+            background: black;
+            color: rgb(8, 194, 8);;
+            h1{
+                font-size: 50px;
+            }
+        }
+        .card-body.dec{
+            border-radius: 10px;
+            background: black;
+            color: red;
+            h1{
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+
+#container{
+    margin-top: -80px;
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    .card{
+        color: white;
+       border: 2px solid dodgerblue;
+       background: none;
+       height: auto;
+    }
+    table{
+        th{
+            background: none;
+            border: 2px solid;
+        }
+        td{
+        border: 2px solid grey;
+        }
+        td:hover{
+            background: dodgerblue;
+            cursor: pointer;
+        }
+        
+        background: none;
+        
+        nav {
+            .pagination{
+               
+                a{
+                    color: dodgerblue;
+                    background: none;
+                    border: none;
+                }
+                a:hover{
+                    transition-duration: .3s;
+                    font-size: 20px;
+                }
+                a:focus{
+                    color: white;
+                }
+                
+            }
+            
+        }
+    }
+  
+
+}
