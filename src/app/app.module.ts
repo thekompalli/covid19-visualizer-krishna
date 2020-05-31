@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StatesComponent } from './states/states.component';
 import { SidebarModule } from 'ng-sidebar';
 import { HomeComponent } from './home/home.component';
+import { MediateService } from './mediate.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { HomeComponent } from './home/home.component';
     ChartsModule,
     SidebarModule
   ],
-  providers: [],
+  providers: [MediateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MediateService } from '../mediate.service';
 
 
 @Component({
@@ -9,30 +10,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class StatesComponent implements OnInit {
 
-  stateData = [];
+  public stateData = [];
   heads = ['stateName', 'confirmed', 'deceased', 'recovered'];
 
-  constructor(private http: HttpClient) { }
+  constructor(private _mediateService:MediateService) { }
 
   ngOnInit(): void {
-    this.http.get<any[]>("https://api.covid19india.org/v2/state_district_wise.json").subscribe(posts => {
-     posts.forEach(i => {
-       let lst = []
-       let obj = {};
-       obj["stateName"] = i["state"];
-       this.stateData.push(obj);
-       i["districtData"].forEach(j =>{
-          let obj2 = {};
-          obj2["distName"] = j["district"];
-          obj2["confirmed"] = j["confirmed"];
-          obj2["deceased"] = j["deceased"];
-          obj2["recovered"] = j["recovered"]
-          lst.push(obj2);
-          obj[i["state"]] = lst;
-       })
-     })
-    })
-    console.log(this.stateData)
+    this.stateData = this._mediateService.getData()
   }
 
 }
