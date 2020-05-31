@@ -9,7 +9,7 @@
        <div class="cards">
         <div class="card-body conf">
           <p class="card-title">TOTAL CONFIRMED</p>
-          <h1>{{stateDetails[0]["confirmed"]}}</h1>
+          <h1>{{stateDetails[stateDetails.length-1]["confirmed"]}}</h1>
         </div>
        </div>
       </div>
@@ -19,7 +19,7 @@
             <p class="card-title">
               TOTAL DECEASED
             </p>
-            <h1>{{stateDetails[0]["deaths"]}}</h1>
+            <h1>{{stateDetails[stateDetails.length-1]["deaths"]}}</h1>
           </div>
         </div>
       </div>
@@ -29,7 +29,7 @@
             <p class="card-title">
               TOTAL RECOVERED
             </p>
-            <h1>{{stateDetails[0]["recovered"]}}</h1>
+            <h1>{{stateDetails[stateDetails.length-1]["recovered"]}}</h1>
           </div>
         </div>
       </div>
