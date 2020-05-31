@@ -2,7 +2,7 @@
     <div class="heading">
         <h1>{{obj["stateName"]}}</h1>
         <h3 *ngIf = "obj['active'] > 6000" >The COVID cases are more than 6000. This state is RedZoned. STAY HOME. STAY SAFE.</h3>
-        <h3 *ngIf = "obj['active'] < 3000"> The COVID cases have crossed 2000. Chances of becoming RedZone are high. Please be careful. Wear Masks. STAY HOME. STAY SAFE.</h3>
+        <h3 *ngIf = "obj['active'] > 2000 && obj['active'] < 6000"> The COVID cases have crossed 2000. Chances of becoming RedZone are high. Please be careful. Wear Masks. STAY HOME. STAY SAFE.</h3>
         
       
     <div class="row mx-auto justify-content-center">
