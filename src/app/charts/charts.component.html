@@ -1,0 +1,80 @@
+<div class="insider">
+    <div class="cumHead">
+        <h1>CUMULATIVE COVID-19 REPORT</h1>
+    </div>
+    
+    <div class="row mx-auto"> 
+        <div id="graph" class = "mt-4" style="display: flex; width: 100%; padding: 5%;">
+            <div class="cards conf col-md-4 mr-4">
+                <div class="card-body" id="chartBody">
+                  <h2 class="card-title">
+                    TOTAL CONFIRMED
+                  </h2>
+                  <canvas id = "canvas">
+                    {{chart[0]}}
+                  </canvas>
+                </div> 
+              </div>
+            <div class="cards dec col-md-4 mr-4">
+                <div class="card-body" id="chartBody">
+                  <h2 class="card-title">
+                    TOTAL DECEASED 
+                  </h2>
+                  <canvas id = "canvas2">
+                    {{chart[1]}}
+                  </canvas>
+                </div> 
+              </div>
+            <div class="cards rec col-md-4">
+                <div class="card-body" id="chartBody">
+                  <h2 class="card-title">
+                    TOTAL RECOVERED
+                  </h2>
+                  <canvas id = "canvas3">
+                    {{chart[2]}}
+                  </canvas>
+                </div> 
+              </div>
+    </div>
+    </div>
+    <div class="dailHead">
+        <h1>DAILY COVID-19 REPORT</h1>
+    </div>
+    
+        <div class="row mx-auto">
+        <div class = "tile2" id="graph2" class = "mt-4" style="display: flex; width: 100%; padding: 5%;">
+            <div class="cards conf col-md-4 mr-4">
+                <div class="card-body" id="chartBody">
+                  <h2 class="card-title">
+                    DAILY CONFIRMED
+                  </h2>
+                  <canvas id = "canvas4">
+                    {{chart[3]}}
+                  </canvas>
+                </div> 
+              </div>
+            <div class="cards dec col-md-4 mr-4">
+                <div class="card-body" id="chartBody">
+                  <h2 class="card-title">
+                    DAILY DECEASED
+                  </h2>
+                  <canvas id = "canvas5">
+                    {{chart[4]}}
+                  </canvas>
+                </div> 
+              </div>
+            <div class="cards rec col-md-4">
+                <div class="card-body" id="chartBody">
+                  <h2 class="card-title">
+                    DAILY RECOVERED
+                  </h2>
+                  <canvas id = "canvas6">
+                    {{chart[5]}}
+                  </canvas>
+                </div> 
+              </div>
+    </div>
+</div>
+</div>
+
+

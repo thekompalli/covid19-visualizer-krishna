@@ -1,0 +1,84 @@
+.insider{
+    .heading{
+        border: 4px solid grey;
+        top: 25px;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding: 5%;
+        background: none;
+        border-radius: 20px;
+        top: -60px;
+        h1{
+            color: dodgerblue;
+            font-size: 70px;
+            letter-spacing: 7px;
+            text-transform: uppercase;
+            
+        }
+        h3{
+            color: grey;
+            letter-spacing: 7px;
+            font-size: 20px;
+        }
+    }
+
+
+    padding: 10%;
+    background: rgb(7,84,99);
+    background: -moz-linear-gradient(135deg, rgba(7,84,99,1) 0%, rgba(2,2,37,1) 46%, rgba(2,0,36,1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(7,84,99,1) 0%, rgba(2,2,37,1) 46%, rgba(2,0,36,1) 100%);
+    background: linear-gradient(135deg, rgba(7,84,99,1) 0%, rgba(2,2,37,1) 46%, rgba(2,0,36,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#075463",endColorstr="#020024",GradientType=1);
+    table{
+        background: none;
+        border: 2px solid dodgerblue;
+        tr,td,th{
+            border: 2px solid grey;
+        }
+    }
+
+
+    .row{
+        padding: 5%;
+      .cards{
+            .card-body.conf{
+                background: rgba(255,7,58,.12549);
+                border-radius: 10px;
+                color: red;
+            h1{
+                color: red;
+                font-size: 50px;
+            }
+            }
+            .card-body.rec{
+                border-radius: 10px;
+                background: rgba(40,167,69,.12549);
+                color: rgb(8, 194, 8);
+                h1{
+                    font-size: 50px;
+                    color: rgb(8, 194, 8);
+                }
+        
+            }
+            .card-body.dec{
+                border-radius: 10px;
+                background: rgba(108,117,125,.0627451);
+                color: white;
+                h1{
+                    font-size: 50px;
+                     color: white;
+                }
+            }
+            .card-body.act{
+                border-radius: 10px;
+                background: rgba(32,26,162,.12549);
+                color: dodgerblue;
+                h1{
+                    font-size: 50px;
+                     color: dodgerblue;
+                }
+            }
+        }
+    }
+}

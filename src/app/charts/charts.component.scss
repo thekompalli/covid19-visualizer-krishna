@@ -1,24 +1,36 @@
 .insider{
+    position: relative;
     background: rgb(7,84,99);
     background: -moz-linear-gradient(135deg, rgba(7,84,99,1) 0%, rgba(2,2,37,1) 46%, rgba(2,0,36,1) 100%);
     background: -webkit-linear-gradient(135deg, rgba(7,84,99,1) 0%, rgba(2,2,37,1) 46%, rgba(2,0,36,1) 100%);
     background: linear-gradient(135deg, rgba(7,84,99,1) 0%, rgba(2,2,37,1) 46%, rgba(2,0,36,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#075463",endColorstr="#020024",GradientType=1);
+    padding: 2%;
+    h2{
+        color: white;
+    }
     h1{
-        text-transform: uppercase;
-        color: White;
-    }
-    table{
-        background: none;
-        td, th{
-            border: 2px solid dodgerblue;
-        }
-        th{
-            text-transform: uppercase;
-        }
-        margin-bottom: 150px;
-    }
-    .heading{
         text-align: center;
+        font-size: 60px;
+        color: grey;
     }
+    #graph{
+       border: 2px solid white;
+   }
+   #graph2{
+       border: 2px solid white;
+   }
+   .dailHead{
+       margin-top: 100px;
+   }
+   .cards.conf{
+       background: rgba(0,123,255,.0627451);
+   }
+   .cards.dec{
+    background: rgba(108,117,125,.0627451);
+   }
+   .cards.rec{
+    background: rgba(40,167,69,.12549);
+    
+   }
 }

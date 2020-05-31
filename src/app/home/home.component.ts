@@ -17,8 +17,8 @@ export class HomeComponent implements OnInit {
   dailyDeceased = [];
   dailyRecovered = [];
   dates = [];
-  heads = ["stateName", "confirmed", "deaths", "recovered"];
-  stateHeading = ["State Name", "Confirmed", "Deaths", "Recovered"];
+  heads = ["stateName", "confirmed", "deaths", "recovered", "active"];
+  stateHeading = ["State Name", "Confirmed", "Deaths", "Recovered", "Active"];
   chart1 = [];
   chart2 = [];
   getArrayNumber(length){
@@ -30,6 +30,10 @@ export class HomeComponent implements OnInit {
     this.startIndex = pageIndex*20;
     this.endIndex = this.startIndex+20;
   }
+
+  getName(index){
+    return this.stateDetails[index]["stateName"]
+  }
  
 
 
@@ -38,12 +42,14 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     this.http.get('https://api.covid19india.org/data.json').subscribe(posts => {
+  
       posts["statewise"].forEach(i => {
         let obj = {};
         obj["stateName"] = i["state"];
         obj["confirmed"] = i["confirmed"];
         obj["deaths"] = i["deaths"];
         obj["recovered"] = i["recovered"];
+        obj["active"] = i["active"];
         this.stateDetails.push(obj);
       })
       this.stateDetails.push(this.stateDetails.shift())
@@ -60,95 +66,97 @@ export class HomeComponent implements OnInit {
         this.dailyConfirmed.push(i["dailyconfirmed"]);
         this.dailyDeceased.push(i["dailydeceased"]);
         this.dailyRecovered.push(i["dailyrecovered"]);
-  
       })
-    })
-    
-    this.chart1.push(new Chart('canvas', {
-      type: 'line',
-      data: {
-        labels: this.dates,
-        datasets: [
-          {
-            label:"Confirmed",
-            data:this.confirmedDetails,
-            borderColor:'#1e90ff',
-            fill: false
-          },
-          {
-            label: "Deceased",
-            data: this.deathDetails,
-            borderColor: '#ff0000',
-            fill: false
-          },
-          {
-            label: "Recovered",
-            data: this.recoveredDetails,
-            borderColor: '#80ff00',
-            fill: false
-          }
-        ]
-
-      },
-      options:{
-        legend: {
-          display: true,
-          
-          labels: {
-            fontColor: "#1e90ff"
-          }
+      this.chart1.push(new Chart('canvas', {
+        type: 'line',
+        data: {
+          labels: this.dates,
+          datasets: [
+            {
+              label:"Confirmed",
+              data:this.confirmedDetails,
+              borderColor:'#1e90ff',
+              fill: false
+            },
+            {
+              label: "Deceased",
+              data: this.deathDetails,
+              borderColor: '#ff0000',
+              fill: false
+            },
+            {
+              label: "Recovered",
+              data: this.recoveredDetails,
+              borderColor: '#80ff00',
+              fill: false
+            }
+          ]
+  
         },
-        scales:{
-          xAxes: [{display: true}],
-          yAxes: [{display: true}]
+        options:{
+          legend: {
+            display: true,
+            
+            labels: {
+              fontColor: "#1e90ff"
+            }
+          },
+          scales:{
+            xAxes: [{display: true}],
+            yAxes: [{display: true}]
+          }
         }
-      }
-    })
-    )
-    
-    this.chart2.push(new Chart('canvas2', {
-      type: 'line',
-      data: {
-        labels: this.dates,
-        datasets: [
-          {
-            label:"Daily Confirmed",
-            data:this.dailyConfirmed,
-            borderColor:'#1e90ff',
-            fill: false
-          },
-          {
-            label: "Daily Deceased",
-            data: this.dailyDeceased,
-            borderColor: '#ff0000',
-            fill: false
-          },
-          {
-            label: "Daily Recovered",
-            data: this.dailyRecovered,
-            borderColor: '#80ff00',
-            fill: false
-          }
-        ]
-
-      },
-      options:{
-        legend: {
-          display: true,
-          
-          labels: {
-            fontColor: "#1e90ff"
-          }
+      })
+      )
+      
+      this.chart2.push(new Chart('canvas2', {
+        type: 'line',
+        data: {
+          labels: this.dates,
+          datasets: [
+            {
+              label:"Daily Confirmed",
+              data:this.dailyConfirmed,
+              borderColor:'#1e90ff',
+              fill: false
+            },
+            {
+              label: "Daily Deceased",
+              data: this.dailyDeceased,
+              borderColor: '#ff0000',
+              fill: false
+            },
+            {
+              label: "Daily Recovered",
+              data: this.dailyRecovered,
+              borderColor: '#80ff00',
+              fill: false
+            }
+          ]
+  
         },
-        scales:{
-          xAxes: [{display: true}],
-          yAxes: [{display: true}]
+        options:{
+          legend: {
+            display: true,
+            
+            labels: {
+              fontColor: "#1e90ff"
+            }
+          },
+          scales:{
+            xAxes: [{display: true}],
+            yAxes: [{display: true}]
+          }
         }
-      }
-    })
+      })
+  
+      
+      )
 
+
+    })
     
-    )
+   
   }
   }
 

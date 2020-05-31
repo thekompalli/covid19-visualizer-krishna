@@ -1,0 +1,64 @@
+<div class="insider">
+    <div class="heading">
+        <h1>{{obj["stateName"]}}</h1>
+        <h3 *ngIf = "obj['active'] > 6000" >The COVID cases are more than 6000. This state is RedZoned. STAY HOME. STAY SAFE.</h3>
+        <h3 *ngIf = "obj['active'] < 3000"> The COVID cases have crossed 2000. Chances of becoming RedZone are high. Please be careful. Wear Masks. STAY HOME. STAY SAFE.</h3>
+        
+      
+    <div class="row mx-auto justify-content-center">
+        <div class="col-lg-3">
+         <div class="cards">
+          <div class="card-body conf">
+            <p class="card-title">TOTAL CONFIRMED</p>
+            <h1>{{obj["confirmed"]}}</h1>
+          </div>
+         </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="cards">
+            <div class="card-body dec">
+              <p class="card-title">
+                TOTAL DECEASED
+              </p>
+              <h1>{{obj["deaths"]}}</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="cards">
+            <div class="card-body rec">
+              <p class="card-title">
+                TOTAL RECOVERED
+              </p>
+              <h1>{{obj["recovered"]}}</h1>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="cards">
+            <div class="card-body act">
+              <p class="card-title">
+                TOTAL ACTIVE
+              </p>
+              <h1>{{obj["active"]}}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div class="container">
+        <table class="table table-striped table-dark w-auto">
+            <thead>
+                <tr>
+                    <th *ngFor = "let title of tableHeadings">{{title}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let details of distDetail">
+                    <td *ngFor = "let i of head">{{details[i]}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

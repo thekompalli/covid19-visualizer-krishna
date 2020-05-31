@@ -8,19 +8,29 @@ import { StatesComponent } from './states/states.component';
 import { SidebarModule } from 'ng-sidebar';
 import { HomeComponent } from './home/home.component';
 import { MediateService } from './mediate.service';
+import { DistrictsComponent } from './districts/districts.component';
+import { DistrictDetailsComponent } from './district-details/district-details.component';
+import { ChartsComponent } from './charts/charts.component';
+import { DailyChartComponent } from './charts/daily-chart/daily-chart.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     StatesComponent,
-    HomeComponent
+    HomeComponent,
+    DistrictsComponent,
+    DistrictDetailsComponent,
+    ChartsComponent,
+    DailyChartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ChartsModule,
-    SidebarModule
+    SidebarModule,
+    FormsModule
   ],
   providers: [MediateService],
   bootstrap: [AppComponent]

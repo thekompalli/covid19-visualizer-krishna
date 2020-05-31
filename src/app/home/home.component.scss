@@ -1,7 +1,7 @@
 .heading{
     top: 25px;
     width: 100%;
-    position: absolute;
+    position: relative;
     text-align: center;
     h1{
         color: rgb(78, 76, 76);
@@ -21,31 +21,39 @@
     background: -webkit-linear-gradient(135deg, rgba(7,84,99,1) 0%, rgba(2,2,37,1) 46%, rgba(2,0,36,1) 100%);
     background: linear-gradient(135deg, rgba(7,84,99,1) 0%, rgba(2,2,37,1) 46%, rgba(2,0,36,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#075463",endColorstr="#020024",GradientType=1);
-    
 }
 .row{
     padding: 10%;
   .cards{
         .card-body.conf{
-            background: black;
+            background: rgba(255,7,58,.12549);
             border-radius: 10px;
-            color: dodgerblue;
+            color: red;
         h1{
+            color: red;
             font-size: 50px;
         }
         }
         .card-body.rec{
             border-radius: 10px;
-            background: black;
-            color: rgb(8, 194, 8);;
+            background: rgba(40,167,69,.12549);
+            color: rgb(8, 194, 8);
             h1{
                 font-size: 50px;
             }
         }
         .card-body.dec{
             border-radius: 10px;
-            background: black;
-            color: red;
+            background: rgba(108,117,125,.0627451);
+            color: white;
+            h1{
+                font-size: 50px;
+            }
+        }
+        .card-body.act{
+            border-radius: 10px;
+            background: rgba(0,123,255,.0627451);
+            color: dodgerblue;
             h1{
                 font-size: 50px;
             }
@@ -62,7 +70,6 @@
     z-index: 1;
     .card{
         color: white;
-       border: 2px solid dodgerblue;
        background: none;
        height: auto;
     }
@@ -74,7 +81,8 @@
         td{
         border: 2px solid grey;
         }
-        td:hover{
+        tr:hover{
+            color: black;
             background: dodgerblue;
             cursor: pointer;
         }
@@ -101,6 +109,13 @@
             
         }
     }
-  
+#chartBody{
+    background: rgba(32,26,162,.12549);
+   border-radius: 10px;
+}
+#chartBody2{
+    background: rgba(255,7,58,.12549);
+    border-radius: 10px;
+}
 
 }
