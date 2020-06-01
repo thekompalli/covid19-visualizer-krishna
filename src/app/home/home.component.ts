@@ -101,6 +101,7 @@ export class HomeComponent implements OnInit {
   
         },
         options:{
+          responsive:true,
           legend: {
             display: true,
             
@@ -149,6 +150,7 @@ export class HomeComponent implements OnInit {
   
         },
         options:{
+          responsive: true,
           legend: {
             display: true,
             
