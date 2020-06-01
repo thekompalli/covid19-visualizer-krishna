@@ -1,15 +1,1 @@
-<ng-sidebar-container>
-    <ng-sidebar [opened] = "opened">
-      <button (click) = "toggleSidebar()">close</button>
-      <div class="menu">
-        <li><a routerLinkActive = "active" routerLink = "/home">Home</a></li>
-        <li><a routerLinkActive = "active" routerLink = "/districts">WORLD</a></li>
-        <li><a routerLinkActive = "active" routerLink = "/states">Details</a></li>
-        <li><a routerLinkActive = "active" routerLink = "/chart1">Data viz</a></li>
-      </div>
-    </ng-sidebar>
-    <div ng-sidebar-content class="side">
-      <button (click) = "toggleSidebar()">More</button>
-    </div>
-  </ng-sidebar-container>
 <router-outlet></router-outlet>

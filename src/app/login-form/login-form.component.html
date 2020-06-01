@@ -1,0 +1,30 @@
+
+<div class="container-fluid" id="container">
+    <div class="container-fluid text-center text-white" style="position: absolute; margin-top: 30px;">
+        <h1 style="font-size: 50px; letter-spacing: 5px;">COVID 19 VISUALIZER</h1>
+        <h3 style="letter-spacing: 4px;">STAY HOME. STAY SAFE. STAY UPDATED.</h3>
+    </div>
+    <div class="row mt-9">
+        <div class="col-lg-3 "></div>
+        <div class="col-lg-6 text-center" style="margin-top: 30vh;">
+            <h1 style="color: white;">LOG IN TO GET UPDATED</h1>
+            <br>
+            <form (ngSubmit)="login()" [formGroup]="loginDetails">
+                <!-- <label for="">E-mail</label> -->
+                <input type=" text " class="form-control" formControlName="email" placeholder="E-mail" [ngClass]="{'error':!loginDetails.get('email').valid && valid,'valid':loginDetails.get('email').valid}">
+                <span *ngIf="!loginDetails.get('email').valid && valid" style="color: red;">Please enter a valid E-mail id</span>
+                <br><br>
+                <!-- <label for="">Password</label> -->
+                <input type="password" class="form-control" id="domainName" formControlName="password" placeholder="Password" [ngClass]="{'error':!loginDetails.get('password').valid && valid ,'valid':loginDetails.get('password').valid}">
+                <span *ngIf="!loginDetails.get('password').valid && valid" style="color: red;">Please enter a password</span>
+                <br><br>
+                <input type="submit" class="btn btn-outline-primary" id="button" value="Log In">
+            </form>
+            <br>
+            <a routerLink="/register">
+                <h3>Join Us</h3>
+            </a>
+        </div>
+        <div class="col-lg-3 "></div>
+    </div>
+</div>

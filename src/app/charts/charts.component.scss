@@ -1,3 +1,74 @@
+ng-sidebar-container{
+    width: 8%;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+
+  
+    .menu{
+        
+        margin-top: 2em;
+        display: block;
+        li{
+            list-style: none;
+            margin-bottom: 15px;
+            a{
+                display: block;
+                width: 100%;
+            }
+        }
+       
+    }
+    .side{
+        button{
+            padding: 5px;
+            background: none;
+            font-size: 25px;
+            border: 2px solid purple;
+            color: black;
+            box-shadow: 0 0 20px purple;
+        }
+        button:hover{
+            transition-duration: .7s;
+            color: rgb(52, 147, 241);
+        }
+    }
+}
+
+
+::ng-deep .ng-sidebar{
+    button{
+        background: none;
+        border: 2px solid dodgerblue;
+        color: grey;
+        text-transform: uppercase;
+        margin-bottom: 20%;
+    }
+    button:hover{
+        color: red;
+        border-color: white;
+    }
+    a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: dodgerblue;
+        margin-bottom: 20%;
+    }
+    a:hover{
+        color: white;
+    }
+    background:  linear-gradient(150deg,  rgb(23, 23, 26) 15%, #2a3147 70%, #1e1e2c 94%);
+    width: 300px;
+    padding: 4em 3em;
+    box-shadow: 0 0 2.5em rgba(85,85,85,0.5);
+    .active{
+        color: white;
+    }
+}
+
+
+
 .insider{
     position: relative;
     background: rgb(7,84,99);

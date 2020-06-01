@@ -40,7 +40,6 @@ chart6 = [];
   }
 
 
-
   getStateData(){
     let lst = [];
     this.http.get('https://api.covid19india.org/data.json').subscribe(posts => {

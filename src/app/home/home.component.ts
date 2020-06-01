@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as Chart from 'chart.js';
+import { AuthsService } from '../auths.service';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,10 @@ import * as Chart from 'chart.js';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  opened = false;
+  toggleSidebar(){
+    this.opened = !this.opened;
+  }
   
   stateDetails = [];
   confirmedDetails = [];
@@ -37,8 +42,10 @@ export class HomeComponent implements OnInit {
  
 
 
-  constructor(private http: HttpClient) { }
-
+  constructor(private http: HttpClient, private auth:AuthsService) { }
+  logout(){
+    return this.auth.logout();
+  }
   ngOnInit(): void {
 
     this.http.get('https://api.covid19india.org/data.json').subscribe(posts => {

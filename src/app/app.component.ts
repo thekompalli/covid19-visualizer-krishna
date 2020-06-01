@@ -9,11 +9,6 @@ import {Title} from "@angular/platform-browser";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  opened = false;
-  toggleSidebar(){
-    this.opened = !this.opened;
-  }
- 
   constructor(private http: HttpClient, private titleService:Title){
     this.titleService.setTitle("COVID19");
   }

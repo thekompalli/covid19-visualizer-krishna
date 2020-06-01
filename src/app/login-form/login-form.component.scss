@@ -1,0 +1,21 @@
+#container{
+    position: fixed;
+    height: 100vh;
+    background: linear-gradient(150deg,  rgb(23, 23, 26) 15%, #2a3147 70%, #1e1e2c 94%);
+    input{
+        background: none;
+        color: white;
+    }
+    #button{
+        color: white;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+    }
+    a:hover{
+        transition-duration: .5s;
+        color: dodgerblue;
+    }
+}

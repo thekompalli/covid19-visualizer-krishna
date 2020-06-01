@@ -12,7 +12,9 @@ import { DistrictsComponent } from './districts/districts.component';
 import { DistrictDetailsComponent } from './district-details/district-details.component';
 import { ChartsComponent } from './charts/charts.component';
 import { DailyChartComponent } from './charts/daily-chart/daily-chart.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { FormsModule } from '@angular/forms';
     DistrictDetailsComponent,
     ChartsComponent,
     DailyChartComponent,
+    LoginFormComponent,
+    RegisterFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     ChartsModule,
     SidebarModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [MediateService],
   bootstrap: [AppComponent]
