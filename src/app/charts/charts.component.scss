@@ -87,9 +87,15 @@ ng-sidebar-container{
     }
     #graph{
        border: 2px solid white;
+       display: flex; 
+       width: 100%; 
+       padding: 5%;
    }
    #graph2{
        border: 2px solid white;
+       display: flex;
+       width: 100%;
+       padding: 5%;
    }
    .dailHead{
        margin-top: 100px;
@@ -104,4 +110,97 @@ ng-sidebar-container{
     background: rgba(40,167,69,.12549);
     
    }
+}
+@media(max-width:630px){
+    
+    ng-sidebar-container{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        height: 30%;
+        z-index: 1;
+    
+      
+        .menu{
+            
+            margin-top: 2em;
+            display: block;
+            li{
+                list-style: none;
+                margin-bottom: 15px;
+                a{
+                    display: block;
+                    width: 100%;
+                }
+            }
+           
+        }
+        .side{
+            button{
+                padding: 5px;
+                background: none;
+                font-size: 25px;
+                border: 2px solid purple;
+                color: black;
+                box-shadow: 0 0 20px purple;
+            }
+            button:hover{
+                transition-duration: .7s;
+                color: rgb(52, 147, 241);
+            }
+        }
+    }
+
+    ::ng-deep .ng-sidebar{
+        border: 2px solid white;
+        border-radius: 50px;
+        margin-top: -30px;
+        button{
+            background: none;
+            border: 2px solid dodgerblue;
+            color: grey;
+            text-transform: uppercase;
+            margin-bottom: -20px;
+            
+        }
+        button:hover{
+            color: red;
+            border-color: white;
+        }
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: dodgerblue;
+            margin-bottom: -20%;
+            margin-bottom: 10px;
+        }
+        a:hover{
+            color: white;
+        }
+        background:  linear-gradient(150deg,  rgb(23, 23, 26) 15%, #2a3147 70%, #1e1e2c 94%);
+        width: 100%;
+        padding: 4em 3em;
+        box-shadow: 0 0 2.5em rgba(85,85,85,0.5);
+        .active{
+            color: white;
+        }   
+     
+    }
+
+    .insider{
+        .cumHead, .dailHead{
+           h1{
+            font-size: 30px;
+           } 
+        }
+
+        #graph, #graph2{
+            .cards.conf, .cards.dec{
+                margin-bottom: 10px;
+            }
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
 }

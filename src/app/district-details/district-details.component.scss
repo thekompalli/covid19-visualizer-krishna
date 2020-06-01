@@ -42,6 +42,9 @@
             color: white;
         }
     }
+    .tbl2{
+        margin-left: 33%;
+    }
 
 
     .row{
@@ -85,5 +88,38 @@
                 }
             }
         }
+    }
+}
+
+@media(max-width: 630px){
+    .insider{
+        .heading{
+            margin-top: 30px;
+            h1{
+                font-size: 20px;
+            }
+            h3{
+                font-size: 15px;
+                letter-spacing: 2px;
+            }
+
+            .cards{
+                margin-bottom: 20px;
+            }
+        }
+       .container{
+            margin-left: -10%;
+            display: flex;
+            flex-direction: column;
+           .tbl1{
+            font-size: 10px;
+           }
+           .tbl2{
+               margin-left: -1%;
+               margin-top: 20px;
+               font-size: 10px;
+              
+           }
+       }
     }
 }
