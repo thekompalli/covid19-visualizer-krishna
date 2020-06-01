@@ -19,6 +19,7 @@ export class AuthGuard implements CanActivate {
     }
     else{
       this.router.navigate(["/"]);
+      localStorage.removeItem('token');
       this.toastr.error("Please Log-in to continue");
       return false;
     }

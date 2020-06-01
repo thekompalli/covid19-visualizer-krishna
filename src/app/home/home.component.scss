@@ -104,6 +104,10 @@ ng-sidebar-container{
             color: red;
             font-size: 50px;
         }
+        h1:hover{
+            transition-duration: .3s;
+            font-size: 70px;
+        }
         }
         .card-body.rec{
             border-radius: 10px;
@@ -111,6 +115,10 @@ ng-sidebar-container{
             color: rgb(8, 194, 8);
             h1{
                 font-size: 50px;
+            }
+            h1:hover{
+                transition-duration: .3s;
+                font-size: 70px;
             }
         }
         .card-body.dec{
@@ -120,6 +128,10 @@ ng-sidebar-container{
             h1{
                 font-size: 50px;
             }
+            h1:hover{
+                transition-duration: .3s;
+                font-size: 70px;
+            }
         }
         .card-body.act{
             border-radius: 10px;
@@ -128,8 +140,13 @@ ng-sidebar-container{
             h1{
                 font-size: 50px;
             }
+            h1:hover{
+                transition-duration: .3s;
+                font-size: 70px;
+            }
         }
     }
+
 }
 
 

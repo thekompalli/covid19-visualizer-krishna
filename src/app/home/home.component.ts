@@ -125,19 +125,25 @@ export class HomeComponent implements OnInit {
               label:"Daily Confirmed",
               data:this.dailyConfirmed,
               borderColor:'#1e90ff',
-              fill: false
+              pointHoverRadius: 5,
+              fill: true,
+              backgroundColor:'#1e90ff'
             },
             {
               label: "Daily Deceased",
               data: this.dailyDeceased,
               borderColor: '#ff0000',
-              fill: false
+              pointHoverRadius: 5,
+              fill: true,
+              backgroundColor:'#ff0000'
             },
             {
               label: "Daily Recovered",
               data: this.dailyRecovered,
+              pointHoverRadius: 5,
               borderColor: '#80ff00',
-              fill: false
+              fill: true,
+              backgroundColor:'#80ff00'
             }
           ]
   
