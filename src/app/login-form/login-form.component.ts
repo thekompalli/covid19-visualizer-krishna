@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder,FormControl, Validators} from '@angular/forms';
 import { AuthsService } from '../auths.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -10,10 +11,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent implements OnInit {
-  loginDetails;
+  loginDetails:any;
   valid=false;
 
-  constructor(private auth:AuthsService, private fb:FormBuilder, private router:Router) { 
+  constructor(private auth:AuthsService, private fb:FormBuilder, private router:Router, private toastr: ToastrService) { 
     this.loginDetails=this.fb.group({
       email:this.fb.control("",[Validators.required,Validators.email]),
       password:this.fb.control("",[Validators.required])
@@ -24,17 +25,16 @@ export class LoginFormComponent implements OnInit {
   }
   login(){
     if(this.loginDetails.valid){
-      // console.log(this.loginDetails.value);
+      
       this.auth.login(this.loginDetails.value).subscribe(
         data=>{
-        // alert("login successfull");
+          this.toastr.success("Login Success", "Welcome", {timeOut:3000})
         this.auth.storeToken(data.token);
-        // console.log(data);
         this.router.navigate(["/home"]);
+
       },
         error=>{
-          // console.log(error);
-        alert(error.error.message);
+         this.toastr.warning(error.error.message,'Details Mismatch', {timeOut: 5000});
       }
       );
     }else{

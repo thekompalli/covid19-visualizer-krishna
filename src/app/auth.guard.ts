@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {  CanActivate, CanActivateChild, CanDeactivate, CanLoad, Route, UrlSegment, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthsService } from './auths.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Injectable({
@@ -9,7 +10,7 @@ import { AuthsService } from './auths.service';
 })
 export class AuthGuard implements CanActivate {
  
-  constructor(private auth:AuthsService, private router:Router){
+  constructor(private auth:AuthsService, private router:Router, private toastr: ToastrService){
 
   }
   canActivate():boolean{
@@ -18,7 +19,7 @@ export class AuthGuard implements CanActivate {
     }
     else{
       this.router.navigate(["/"]);
-      alert("Log-in to continue");
+      this.toastr.error("Please Log-in to continue");
       return false;
     }
   }

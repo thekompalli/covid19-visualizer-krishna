@@ -15,6 +15,8 @@ import { DailyChartComponent } from './charts/daily-chart/daily-chart.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { RegisterFormComponent } from './register-form/register-form.component';
     ChartsModule,
     SidebarModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot() 
   ],
   providers: [MediateService],
   bootstrap: [AppComponent]
